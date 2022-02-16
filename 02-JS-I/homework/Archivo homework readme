@@ -62,11 +62,11 @@ Es decir, con las palabras if, else, le ponemos condiciones a nuestros códigos,
 Por ejemplo para saber si una baraja de cartas españolas está completa (es decir tiene las 50 cartas que vienen en el mazo)
 function mazoDeCartas (cantidad){
     if (cantidad < 50){
-        return 'Faltan cartas'
+        return "Faltan cartas"
     } else if (cantidad == 50) {
-        return 'Están todas'
+        return "Están todas"
     } else {
-        return 'Sobran cartas'
+        return "Sobran cartas"
     }
 }
 Entonces, con esta función en la que pusimos condiciones, cuando invoquemos 'mazoDeCartas' y entre paréntesis pongamos un número, lo que hace la consola es agarrar ese número e ir leyendo los códigos que pusimos, de arriba para abajo. Si cumple la condición para nuestro primer código sea verdadero, va a devolver lo que esté adentro de ese return. Sino, lo va a ignorar y va a pasar al siguiente, y así hasta que cumpla la condición de ser verdadero. Si no es verdadero con ninguno de nuestros códigos, va a retornar el último en el que dice 'else'. Esta palabra quiere decir "si no es verdadero con los códigos anteriores retorná esto".
@@ -75,4 +75,3 @@ Valores booleanos ('true', 'false')
 Valores booleanos son datos lógicos, que pueden representarse de una manera binaria. Es decir, con dos opciones: "verdadero" o "falso" La consola funciona en inglés así que siempre van a aparecer como 'true' o 'false'. 
 Muchas veces la consola para saber cómo manejar los datos que le damos, necesita traducirlos a valores booleanos.
 Por ejemplo, en el caso anterior cuando hablamos de funciones, cuando ponemos "if" o "else" la consola va a evaluar si el argumento que le estamos dando, con esa condición, sería "true" (verdadero) o "false" (falso) para elegir qué retornar.
-
