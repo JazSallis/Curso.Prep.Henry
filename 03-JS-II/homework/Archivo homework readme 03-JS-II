@@ -1,0 +1,41 @@
+En este archivo de texto voy a explicar los siguientes conceptos 
+como si me dirigiera a una persona de 12 años 
+
+* `for`
+* `&&`, `||`, `!`
+
+"for":
+For, o bucle for es una herramienta de Java Script (JS) para hacer tareas repetitivas de manera automatizada. Para declarar un bucle for en la consola, es necesario empezar con la palabra clave 'for', y después abrir y cerrar paréntesis. Adentro de los paréntesis hay tres partes separadas entre sí por punto y coma ' ; ' . La primera es declarar una variable y establecer su valor con un número. Después del punto y coma, hay que poner una condición de frenado, o sea que el bucle va a funcionar mientras cumpla con esta condición, y cuando ya no lo cumpla se va a frenar. Después del último punto y coma va el nombre de la variable con un ++, que va a hacer que cuando termine de ejecutarse el código con la variable en el número en que la establecimos, le va a sumar 1 y va a volver a repetir el bucle. Después de construír este bucle for, luego de cerrar los paréntesis se abre un corchete ' { ' y abajo se puede poner cualquiér código que queramos que haga funcionar el bucle. También podemos usar más de un código, y hasta otro bucle for.  
+Por ejemplo: 
+for (var i = 1 ; i <= 10 ; i++){
+    console.log(i)
+}
+En este caso, el bucle for va a imprimir los números del 1 al 10 automáticamente. 
+Los bucles pueden incluírse en funciones, pueden 'anidarse' es decir poner un for como código de un for, y hacerlos trabajar juntos.
+
+'&&', '||', '!'
+Estos son operadores lógicos y los usamos cuando queremos combinar dos o más expresiones de igualdad (o sea cuando ponemos que algo es igual a algo) y preguntar si alguna de las expresiones es verdadera, si todas lo son, si alguna es falsa, si todas lo son, y dependiendo de eso, y del operador lógico que usemos, el resultado de nuestra combinación sera 'true' o 'false'.
+
+'&&':
+Este operador se llama "and" (y), y cuando lo usamos para combinar dos o más expresiones de igualdad, el resultado será verdadero sólo si todas las expresiones son verdaderas. Si una es verdadera pero otra es falsa, el resultado será falso, y si todas son falsas, el resultado será falso.
+Por ejemplo: 
+
+(10 === 5 + 5 && 2 === 1 + 1)  ---> True (porque ambas expresiones son verdaderas)
+(10 === 5 + 5 && 2 === 5 + 5)  ---> False (porque una de las dos expresiones es falsa)
+(8 === 5 + 5 && 2 === 5 + 5)   ---> False (porque ambas expresiones son falsas)
+
+'||'
+Este opreador lógico se llama "or" (ó), y cuando lo usamos para combinar dos o más expresiones de igualdad, el resultado será verdadero si al menos una de las expresiones es verdadera, y sólo será falso si todas las expresiones son falsas.
+Por ejemplo: 
+
+(10 === 5 + 5 || 2 === 1 + 1)  ---> True (porque ambas expresiones son verdaderas)
+(10 === 5 + 5 || 2 === 5 + 5)  ---> True (porque una de las dos expresiones es verdadera)
+(8 === 5 + 5 || 2 === 5 + 5)   ---> False (porque ambas expresiones son falsas)
+
+'!'
+Este operador lógico se llama "not" (no) y cuando lo usamos, va a invertir la veracidad de la declaración. Es como que viene a decir "lo que estoy diciendo, bueno eso no", y al haber sólo dos opciones en valores booleanos (true y false) cuando aparece este símbolo el resultado será lo contrario de la expresión.
+Por ejemplo
+
+1 !== 1 ---> False (porque 1 es igual a 1, y al usar el 'not' estamos diciendo 'uno no es igual a uno' lo cual es falso)
+(!(2 + 2 = 5)) ---> True (porque el resultado de la expresión sin el 'not' es falso, pero al poner el '!' estamos diciendo "de esto que estoy poniendo acá, lo contrario".)
+
