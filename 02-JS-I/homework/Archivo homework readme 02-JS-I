@@ -11,7 +11,9 @@ Variables:
 Las variables en son una manera de decirle al intérprete
 de JS (JavaScript) que una determinada cosa tiene un valor, y guardarlo.
 O sea una variable tiene un nombre que elijamos, y lo que le 
-queremos decir a JS es que "esto tiene este valor", y este valor puede ser tanto de texto como de números u operaciones matemáticas, etc., y JS se va a acordar de esto, para cuando queramos volver a invocar la variable, el valor que le hayamos asignado va a estar ahí. 
+queremos decir a JS es que "esto tiene este valor", y este valor puede ser tanto de texto como 
+de números u operaciones matemáticas, etc., y JS se va a acordar de esto, para cuando queramos volver
+a invocar la variable, el valor que le hayamos asignado va a estar ahí. 
 Una de las maneras en las que podemos construír una variable es de la siguiente manera: 
 var saludo = 'Hola';
 var numerosDe1a5 = 1, 2, 3, 4, 5
@@ -21,45 +23,70 @@ let estoyTomando = 'Mate'
 const nacionalidad = 'Argentina'
 
 Strings:
-Strings es otra manera de decirle a las líneas de caracteres que queremos que se queden como tal. Es decir, no son códigos ni palabras claves. Se pueden utilizar por ejemplo para poner nombres a archivos, asignarlas como valor de una variable, y lo importante a saber es que siempre siempre siempre que queramos decirle al JS que esos caracteres son un 'string' tenemos que ponerlo entre comillas " ", y a su vez todo lo que encontremos entre comillas, será un 'string'.
+Strings es otra manera de decirle a las líneas de caracteres que queremos que se queden como tal. 
+Es decir, no son códigos ni palabras claves. Se pueden utilizar por ejemplo para poner nombres a 
+archivos, asignarlas como valor de una variable, y lo importante a saber es que siempre siempre 
+siempre que queramos decirle al JS que esos caracteres son un 'string' tenemos que ponerlo entre 
+comillas " ", y a su vez todo lo que encontremos entre comillas, será un 'string'.
 Un ejemplo sería: 
 var miNombre = "Jazmín" 
 En este ejemplo el string es "Jazmín", ya que es lo que se encuentra entre comillas.
 También si ponemos 
 var miEdad = "24 Años." 
-lo que está entre comillas sigue siendo un string, ya que podemos utilizar todo tipo de caracteres en él, ya sean letras, números o símbolos. 
+lo que está entre comillas sigue siendo un string, ya que podemos utilizar todo tipo de caracteres en él,
+ya sean letras, números o símbolos. 
 
 Funciones: 
-Usamos funciones cuando tenemos que agrupar códigos, que tengamos que volver a usar en algún momento, para evitar escribir lo mismo muchas veces. Es una manera de decirle a JS que ejecute los códigos que pusimos en la función cada vez que la invoquemos, con la información que le vayamos a brindar en los argumentos. 
-Los argumentos son como variables a las que le podemos asignar un valor cuando vayamos a invocar la función. 
+Usamos funciones cuando tenemos que agrupar códigos, que tengamos que volver a usar en algún momento, 
+para evitar escribir lo mismo muchas veces. Es una manera de decirle a JS que ejecute los códigos que 
+pusimos en la función cada vez que la invoquemos, con la información que le vayamos a brindar en los 
+argumentos. 
+Los argumentos son como variables a las que le podemos asignar un valor cuando vayamos a invocar la 
+función. 
 La manera que entiendo por ahora de escribir una función es la siguiente: 
 function nombreDeLaFuncion (argumento1, argumento2) {
     console.log('Como ejemplo te digo mi nombre: ' + argumento1)
     console.log('Y por poner otro ejemplo te digo mi apellido: ' + argumento2)
 }
-Para dar una breve explicación, primero hay que usar la palabra clave 'function' para hacerle saber a JS que lo que sigue es una función. Lo siguiente es ponerle nombre a la función, que lo conveniente es que explique qué es lo que va a hacer esa función para cuando necesitemos invocarle. Luego entre paréntesis la cantidad de argumentos que queramos, que es a lo que le asignaremos el valor cuando queramos usar nuestra función, y después se abren corchetes. En la línea de abajo van a ir los códigos que queramos que ejecute la función, y finalmente cerramos corchetes. 
-entonces cada ves que invoque la función nombreDeLaFuncion y defina lo que hay en argumento1 y argumento2, la función ejecutará los códigos que tiene adentro (en este caso console.log) y reemplazará los argumentos por el valor que les haya asignado. 
+Para dar una breve explicación, primero hay que usar la palabra clave 'function' para hacerle saber a JS 
+que lo que sigue es una función. Lo siguiente es ponerle nombre a la función, que lo conveniente es 
+que explique qué es lo que va a hacer esa función para cuando necesitemos invocarle. Luego entre 
+paréntesis la cantidad de argumentos que queramos, que es a lo que le asignaremos el valor cuando 
+queramos usar nuestra función, y después se abren corchetes. En la línea de abajo van a ir los códigos 
+que queramos que ejecute la función, y finalmente cerramos corchetes. 
+entonces cada ves que invoque la función nombreDeLaFuncion y defina lo que hay en argumento1 y 
+argumento2, la función ejecutará los códigos que tiene adentro (en este caso console.log) y reemplazará 
+los argumentos por el valor que les haya asignado. 
 --Para invocar esta función lo hacemos así:--
 nombreDeLaFuncion ("Jazmin", "Sallis")
 --y al apretar enter, la consola debería devolver: --
 Como ejemplo te digo mi nombre: Jazmín
 Y por poner otro ejemplo te digo mi apellido: Sallis .
 Y así podríamos reemplazar el valor de los argumentos por los que queramos. 
-Es importante aclarar que no es indispensable poner argumentos en una función, y al invocarla se pueden abrir y cerrar los paréntesis sin nada adentro y sólo ejecutará los códigos que tenga adentro. 
-Una de las cosas importantes de las funciones es que la consola las evalúa y devuelve 'algo'. Para indicarle a la función qué es lo que queremos que devuelva podemos usasr la palabra 'return'. Por ejemplo, si queremos que la función devuelva unaa suma, le decimos: 
+Es importante aclarar que no es indispensable poner argumentos en una función, y al invocarla se pueden 
+abrir y cerrar los paréntesis sin nada adentro y sólo ejecutará los códigos que tenga adentro. 
+Una de las cosas importantes de las funciones es que la consola las evalúa y devuelve 'algo'. 
+Para indicarle a la función qué es lo que queremos que devuelva podemos usasr la palabra 'return'. 
+Por ejemplo, si queremos que la función devuelva unaa suma, le decimos: 
 function suma (a, b){
     return a + b
 }
 luego para invocarla le decimos
 suma (13, 2)
-y al apretar enter nos devolverá el resultado de la suma de estos dos números, porque es lo que le indicamos que tenía que retornar. 
-Si cuando creamos la función, escribimos en un momento la palabra 'return' parar indicar que eso es lo que tiene que retornar, no importa qué códigos pongamos después, la consola sólo lee la función hasta el 'return' y todo lo que aparezca seguido no lo va a ejecutar. 
-Cuando no creamos la función para que devuelva algo en específico, la consola retorna por defecto 'undefined', que quiere decir que el resultado esa función no está definido. 
+y al apretar enter nos devolverá el resultado de la suma de estos dos números, porque es lo que le 
+indicamos que tenía que retornar. 
+Si cuando creamos la función, escribimos en un momento la palabra 'return' parar indicar que eso es 
+lo que tiene que retornar, no importa qué códigos pongamos después, la consola sólo lee la función 
+hasta el 'return' y todo lo que aparezca seguido no lo va a ejecutar. 
+Cuando no creamos la función para que devuelva algo en específico, la consola retorna por defecto 
+'undefined', que quiere decir que el resultado esa función no está definido. 
 
 Declaraciones if: 
 La declaración if sirve para controlar el flujo de nuestras funciones. 
-Es decir, con las palabras if, else, le ponemos condiciones a nuestros códigos, para que según los argumentos que tengamos, retorne una cosa o retorne otra. 
-Por ejemplo para saber si una baraja de cartas españolas está completa (es decir tiene las 50 cartas que vienen en el mazo)
+Es decir, con las palabras if, else, le ponemos condiciones a nuestros códigos, para que según los 
+argumentos que tengamos, retorne una cosa o retorne otra. 
+Por ejemplo para saber si una baraja de cartas españolas está completa (es decir tiene las 50 cartas 
+que vienen en el mazo)
 function mazoDeCartas (cantidad){
     if (cantidad < 50){
         return "Faltan cartas"
@@ -69,9 +96,20 @@ function mazoDeCartas (cantidad){
         return "Sobran cartas"
     }
 }
-Entonces, con esta función en la que pusimos condiciones, cuando invoquemos 'mazoDeCartas' y entre paréntesis pongamos un número, lo que hace la consola es agarrar ese número e ir leyendo los códigos que pusimos, de arriba para abajo. Si cumple la condición para nuestro primer código sea verdadero, va a devolver lo que esté adentro de ese return. Sino, lo va a ignorar y va a pasar al siguiente, y así hasta que cumpla la condición de ser verdadero. Si no es verdadero con ninguno de nuestros códigos, va a retornar el último en el que dice 'else'. Esta palabra quiere decir "si no es verdadero con los códigos anteriores retorná esto".
+Entonces, con esta función en la que pusimos condiciones, cuando invoquemos 'mazoDeCartas' y entre 
+paréntesis pongamos un número, lo que hace la consola es agarrar ese número e ir leyendo los códigos 
+que pusimos, de arriba para abajo. Si cumple la condición para nuestro primer código sea verdadero, 
+va a devolver lo que esté adentro de ese return. Sino, lo va a ignorar y va a pasar al siguiente, 
+y así hasta que cumpla la condición de ser verdadero. Si no es verdadero con ninguno de nuestros códigos, 
+va a retornar el último en el que dice 'else'. Esta palabra quiere decir "si no es verdadero con los 
+códigos anteriores retorná esto".
 
 Valores booleanos ('true', 'false')
-Valores booleanos son datos lógicos, que pueden representarse de una manera binaria. Es decir, con dos opciones: "verdadero" o "falso" La consola funciona en inglés así que siempre van a aparecer como 'true' o 'false'. 
-Muchas veces la consola para saber cómo manejar los datos que le damos, necesita traducirlos a valores booleanos.
-Por ejemplo, en el caso anterior cuando hablamos de funciones, cuando ponemos "if" o "else" la consola va a evaluar si el argumento que le estamos dando, con esa condición, sería "true" (verdadero) o "false" (falso) para elegir qué retornar.
+Valores booleanos son datos lógicos, que pueden representarse de una manera binaria. Es decir, 
+con dos opciones: "verdadero" o "falso" La consola funciona en inglés así que siempre van a aparecer 
+como 'true' o 'false'. 
+Muchas veces la consola para saber cómo manejar los datos que le damos, necesita traducirlos a valores 
+booleanos.
+Por ejemplo, en el caso anterior cuando hablamos de funciones, cuando ponemos "if" o "else" la consola 
+va a evaluar si el argumento que le estamos dando, con esa condición, sería "true" (verdadero) o 
+"false" (falso) para elegir qué retornar.
