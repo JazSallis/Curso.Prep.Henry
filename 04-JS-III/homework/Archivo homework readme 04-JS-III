@@ -1,0 +1,56 @@
+En este archivo de texto voy a explicar el siguiente conceptos 
+como si me dirigiera a una persona de 12 años 
+
+	* Arrays
+
+'Arrays':
+Un array (arreglo) es basicamente como una lista en la que podemos "guardar" cualquier tipo de dato.
+La manera de crear array es definiendolo como una variable, es decir con un nombre, y la lista irá despues del = y entre corchetes o brackets [].
+Cada elemento que guaremos va a tener un número que corresponde a su lugar en la lista empezando desde 0. Sabiendo este número podemos acceder a este dato cuando lo necesitemos.
+Ejemplo:
+var MiArray = [1, 2, 'hola', true, null, undefined, function miFuncion(), ["otro arreglo", 1, 2, 3]]
+               0  1     2     3     4        5              6                       7
+
+Como podemos ver, podemos poner cualquier tipo de dato que queramos almacenar dentro de un arreglo, y abajo vemos el número del lugar que ocupan.
+Si queremos acceder a algo que este adentro del array lo hacemos así 
+
+MiArray [número] 
+
+En donde dice "número" podemos poner cualquier número, y si hay un elemento en la lista ocupando ese lugar, nos devolverá ese elemento. Si no hay un elemento en el array ocupando ese lugar nos devolverá 'undefined', es decir 'no definido'.
+Por ejemplo, si ponemos:
+MiArray [2]
+nos devolverá 'hola' porque está en el segundo lugar del arreglo, teniendo en cuenta que se empieza a contar desde 0. 
+
+si queremos acceder a algun elemento del arreglo dentro del arrelgo, suponiendo que queremos acceder al string del segundo arreglo lo hacemos así
+MiArray [7][0]
+el 7 porque el segundo arreglo está ocupando esa posición en MiArray, y 0 porque el string al que queríamos acceder está en primer lugar, es decir posición 0. 
+
+Si queremos saber cuántos elementos tiene un arreglo, usamos la propiedad .length
+MiArray.length devolvería un 8, porque es la cantidad de elementos que tenemos. 
+
+Si queremos saber cuál es el último elemento del arreglo, podemos hacer: 
+console.log (MiArray.length -1)
+y nos devolverá el elemento que esté en el último lugar.
+
+Tambien podemos agregar elementos a la lista asignandoles un valor así: 
+MiArray [9] = 'nuevo elemento'
+y nuestro string (o el elemento que queramos agregar) integrará nuestra lista en la posición en la que lo hayamos agregado. 
+
+Si queremos agregar un elemento al final de la lista sin averiguar cuantos elementos hay antes, podemos usar la función 'push'.
+
+MiArray.push (3)
+
+En este caso, el número 3 se agregará al final de la lista. 
+
+También hay una función que se llama 'pop', y lo que hace es mostrar el último elemento de la lista a la vez que lo elimina definitivamente. 
+
+Si hacemos 
+MiArray.pop
+
+nos devolverá el último elemento pero éste desaparecerá del arreglo. 
+Para guardarlo podemos "guardarlo" en una variable de esta forma: 
+var ultimoElemento = MiArray.pop
+
+Ahora lo que haya estado en el último lugar del array, estará como valor de la variable ultimoElemento, pero habrá desaparecido del array.
+
+Un dato curioso, es que en Java Script, todos los "strings" son un tipo de array, y por eso entre otras cosas se les puede aplicar la propiedad .length.
