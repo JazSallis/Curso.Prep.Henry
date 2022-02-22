@@ -53,4 +53,23 @@ var ultimoElemento = MiArray.pop
 
 Ahora lo que haya estado en el último lugar del array, estará como valor de la variable ultimoElemento, pero habrá desaparecido del array.
 
+Tambien hay funciones que trabajan de la misma manera que '.push' y '.pop', pero sobre el primer elemento del arreglo.
+Estas funciones se llaman '.unshift' y '.shift', que lo que hacen es
+'.unshift': Agrega un elemento al principio del array, es decir en la posición '0', desplazando los otros elementos una posición. (el que estaba en 0, pasa a estar en 1, el que estaba en 1 pasa al 2, etc.)
+ejemplo: 
+var algunArray = [1, 2, 3, 4, 5]
+algunArray.unshift (0)
+algunArray 
+0, 1, 2, 3, 4, 5
+
+'.shift' : Esto elimina el primer elemento del array, igual que la función '.pop' elimina el último. 
+Siguiendo con el ejemplo del arreglo 'algunArray':
+algunArray.shift()
+algunArray
+1, 2, 3, 4, 5
+algunArray.sinft()
+algunArray
+2, 3, 4, 5.
+
+
 Un dato curioso, es que en Java Script, todos los "strings" son un tipo de array, y por eso entre otras cosas se les puede aplicar la propiedad .length.
