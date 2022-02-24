@@ -4,7 +4,7 @@ como si me dirigiera a una persona de 12 años
 * `for`
 * `&&`, `||`, `!`
 
-"for":
+'for':
 For, o bucle for es una herramienta de Java Script (JS) para hacer tareas repetitivas de manera automatizada. Para declarar un bucle for en la consola, es necesario empezar con la palabra clave 'for', y después abrir y cerrar paréntesis. Adentro de los paréntesis hay tres partes separadas entre sí por punto y coma ' ; ' . La primera es declarar una variable y establecer su valor con un número. Después del punto y coma, hay que poner una condición de frenado, o sea que el bucle va a funcionar mientras cumpla con esta condición, y cuando ya no lo cumpla se va a frenar. Después del último punto y coma va el nombre de la variable con un ++, que va a hacer que cuando termine de ejecutarse el código con la variable en el número en que la establecimos, le va a sumar 1 y va a volver a repetir el bucle. Después de construír este bucle for, luego de cerrar los paréntesis se abre un corchete ' { ' y abajo se puede poner cualquiér código que queramos que haga funcionar el bucle. También podemos usar más de un código, y hasta otro bucle for.  
 Por ejemplo: 
 for (var i = 1 ; i <= 10 ; i++){
