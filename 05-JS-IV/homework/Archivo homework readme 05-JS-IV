@@ -8,3 +8,66 @@ como si me dirigiera a una persona de 12 años
 	* Notación de puntos vs notación de corchetes
 
 'Objetos':
+Los objetos son parecidos a los array, en el sentido que también nos sirven para coleccionar elementos,
+que en el caso de los objetos se llaman "propiedades". 
+En los array, cada elemento tenía un orden dado por un número, del lugar que ocupaba en la lista. 
+En los objetos, las propiedades se pueden definir con palabras, y cada propiedad tiene un valor, que puede ser cualquier tipo de dato.
+Para definir un objeto, primero hay que establecerlo como una variable, y establecer su valor entre llaves '{}'.
+ejemplo: 
+var objeto = {}
+y entre las llaves van a estar las propiedades una abajo de la otra, que se pueden llamar como queramos 
+sin necesidad de llevar comillas. Cada propiedad tiene un valor que va a estar despues de dos puntos ' : '
+y se va a separar con una coma ',' después del valor.
+ejemplo: 
+var objeto = {
+	propiedad1: 'valor1',
+	propiedad2: 'valor2',
+	propiedadN: 'valorN',
+}
+
+Y así como en los arrays podíamos acceder a los datos que teníamos guardados usando los números 
+(array[0], array[1] etc.) en los objetos podemos acceder de la misma manera.
+Cuando ponemos objeto[propiedad1] nos va a devolver el valor 1. 
+Esta manera de acceder a los valores de las propiedades se llama "bracket notation".
+Hay otra manera de acceder al valor de las propiedades que se llama "dont notation" que es utilizando
+el nombre del objeto, un punto '.' y el nombre de la propiedad: 
+objeto.propiedad1
+
+'Propiedades':
+Las propiedades es como se llaman a los elementos dentro de los objetos. Cada objeto es una lista de propiedades 
+a las que le podemos definir un valor, cambiarlo, agregarle propiedades al objeto, o eliminarla de nuestra lista.
+Para agregar una propiedad a un objeto que ya existe, basta con ponerle un nombre y asignarle un valor. 
+Por ejemplo: 
+objeto.nuevaPropiedad = 'nuevo valor';
+Para borrarla podemos usar la palabra clave 'delete' así: 
+delete objeto.nuevaPropiedad; 
+para cambiar el valor de una propiedad lo hacemos así: 
+objeto.propiedad1 = 'valor1.1'.
+
+'Métodos':
+Cuando el valor de una propiedad dentro de un objeto es una función, a ésta se le dice 'método'.
+También se le dice método a una función establecida previamente, que los objetos podrán invocar.
+Como sabemos, dentro de las funciones muchas veces usamos valores que ya están establecidos en otro lado, como por ejemplo nombres de variables.
+Cuando usamos objetos, esos valores pueden cambiar, o a veces queremos usar la misma función (método) con más de un objeto, (por ejemplo si tenemos varios objetos que tienen el mismo argumento pero con diferente valor como puede ser un nombre o edad). 
+Para estos casos existe la palabra clave 'this.'(incluido el punto).
+Esta palabra va a hacer referencia al objeto que está invocando el método, y se usa antes del argumento que queremos usar en nuestro método.
+Un ejemplo: 
+
+function saludar (){
+	console.log("hola " + this.nombre)
+}
+
+var mariana = {
+	nombre: 'Mariana',
+	saludar: saludar
+}
+var claudia = {
+	nombre: 'Claudia',
+	saludar: saludar
+}
+
+En este caso nuestro método quiere usar el valor de un nombre para saludarlo, pero nuestros dos objetos tienen nombres diferentes.
+Como la palabra clave 'this' hace referencia al objeto que la invoca, cuando ponga 'claudia.saludar' me va a decir 'hola claudia', y cuando ponga 'mariana.saludar' me va a devolver 'hola mariana'.
+Es como si 'this.' se reemplazara con el nombre del objeto, y en el método dijera mariana.nombre, en el caso de que el objeto mariana invoque este método 'saludar'.
+
+'Bucle for ...in':
