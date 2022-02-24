@@ -111,7 +111,7 @@ function agregarAmigo(usuario, nuevoAmigo) {
   // Devuelve el objeto "usuario"
   // // Tu código:
   usuario['amigos'].push(nuevoAmigo);
-  return usuario
+  return usuario;
 }
 
 function pasarUsuarioAPremium(usuarios) {
@@ -123,7 +123,7 @@ function pasarUsuarioAPremium(usuarios) {
   for (var i = 0 ; i < usuarios.length ; i++){
     usuarios[i]['esPremium'] = true;
   }
-  return usuarios
+  return usuarios;
 }
 
 function sumarLikesDeUsuario(usuario) {
@@ -137,7 +137,7 @@ function sumarLikesDeUsuario(usuario) {
   for (var i = 0; i < usuario.posts.length ; i++){
     suma = suma + usuario.posts[i].likes;
   }
-  return suma 
+  return suma;
 }
 
 
@@ -159,9 +159,9 @@ function agregarMetodoCalculoDescuento(producto) {
   // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
   // Tu código:
   producto['calcularPrecioDescuento'] = function(){
-    return (producto.precio - (producto.precio * producto.porcentajeDeDescuento))
+    return (producto.precio - (producto.precio * producto.porcentajeDeDescuento));
   }
-  return producto
+  return producto;
 }
 
 //var producto = {
