@@ -71,3 +71,55 @@ Como la palabra clave 'this' hace referencia al objeto que la invoca, cuando pon
 Es como si 'this.' se reemplazara con el nombre del objeto, y en el método dijera mariana.nombre, en el caso de que el objeto mariana invoque este método 'saludar'.
 
 'Bucle for ...in':
+En el caso de los arrays, cuando necesitamos recorrerlos sabemos que podemos usar el bule 'for', que va aumentando el numero del indice en uno y vuelve a empezar, hasta que recorre todos los elementos de nuestro arreglo.
+Cuando lo que queremos recorrer o iterar son objetos, al no tener indice numérico, lo que tenemos que usar es el bucle 'for ... in loop', que tiene una sintaxis parecida al bucle for que conocemos, pero en vez de usar una variable con un valor numérico entre los parentesis, va a usar la palabra clave 'in', seguida del nombre del objeto y lo vamos a escribir de la siguiente manera: 
+
+for (var clave in objeto){
+	console.log(clave);
+	console.log(objeto[clave])
+}
+Por ejemplo:
+
+var usuario = {
+    username: 'juan.perez',
+    password: 'loremipsumpwd123',
+    lovesJavascript: true,
+    favoriteNumber: 42
+};
+
+for (var clave in usuario){
+    console.log(clave);
+    console.log(usuario[clave]);
+}
+
+// username
+// 'juan.perez'
+// password
+// 'loremipsumpwd123'
+// lovesJavascript
+// true
+// favoriteNumber
+// 42
+
+Y este bucle va a recorrer de principio a fin todas las propiedades y los valores del objeto.
+
+'Notacion de puntos vs notacion de corchetes'
+Para acceder a los pares de 'clave:valor' de nuestros objetos hay dos maneras posibles: 
+bracket notation:
+Esta es una manera de acceder a las propiedades de un objeto, tal como lo hacíamos con los elementos del array. Sólo que en vez de poner el número de índice, ponemos la palabra clave que tiene esa propiedad. 
+Por ejemplo:
+usuario['username']
+'juan.perez'
+usuario['password']
+'loremipsumpwd123'
+Esta notación se verá sobre todo cuando el nombre de nuestro argumento hace alusión a una variable que ya esté establecida, y en ese caso no habrá que utilizar los corchetes
+
+dont notation: 
+Esta es una manera más rápida de acceder a los elementos sin necesidad de usar los brackets, utilizando el nombre del objeto, un punto '.' y el nombre de la propiedad.
+Por ejemplo: 
+usuario.username
+'juan.perez'
+usuario.password
+'loremipsumpwd123'
+
+
