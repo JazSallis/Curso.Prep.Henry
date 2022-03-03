@@ -38,4 +38,3 @@ Por ejemplo
 
 1 !== 1 ---> False (porque 1 es igual a 1, y al usar el 'not' estamos diciendo 'uno no es igual a uno' lo cual es falso)
 (!(2 + 2 = 5)) ---> True (porque el resultado de la expresión sin el 'not' es falso, pero al poner el '!' estamos diciendo "de esto que estoy poniendo acá, lo contrario".)
-
