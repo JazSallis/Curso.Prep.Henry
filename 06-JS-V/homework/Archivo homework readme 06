@@ -4,5 +4,55 @@ como si me dirigiera a una persona de 12 años:
 * `prototype`
 * _Constructors_ (de Clases)
 
+'Constructors':
+A veces en programación vamos a tener muchos objetos con las mismas propiedades o métodos, y tendría muchas contras tener que escribirlos cada vez que creemos un nuevo objeto. Ocuparía mucha memoria porque estaríamos repitiendo muchas veces lo mismo, hay más posibilidades de equivocarse al escribir algún código o alguna palabra, y nos tomaría mucho tiempo. Por eso JS permite crear los objetos a partir de CLASES, que vendría siendo como una 'plantilla' que tiene predeterminadas las propiedades que van a compartir los objetos, y a los que vamos a poder asignarles diferentes valores con cada objeto que creemos gracias a la palabra clave 'this'. 
+Esto se hace con funciones 'constructoras' (constructors), las cuales, para distinguirla de otras funciones, tendrán nombres que empiecen con mayúscula; pero esto es una convención.
+Las funciones constructoras se escriben así :
+
+function Constructors (argumento1, argumento2, metodo){
+    this.argumento1 = argumento1;
+    this.argumento2 = argumento2;
+    this.metodo = function metodo(){
+        console.log ('este es un método')
+    }
+}
+
+Esta funcion constructora es nuestra 'clase' (o sea, como la plantilla) a partir de la que podemos crear la cantidad de objetos que queramos con estos argumentos, y pasando los valores que queramos como propiedades.
+Lo hacemos utilizando la palabra clave new, de la siguiente manera:
+
+var nuevoObjeto = new Constructors ('primer argumento', 'segundo argumento')
+
+y nuestro objeto quedará así: 
+
+nuevoObjeto = Constructors {
+    argumento1: 'primer argumento',
+    argumento2: 'segundo argumento',
+    metodo: function metodo(){
+        console.log ('este es un método')
+}
+
+Como vemos, creamos una variable con el nombre del nuevo objeto, y después del '=' utilizamos la palabra clave 'new' y el nombre de nuestra funcion constructora. Luego entre los paréntesis van los 'valores' que queramos definir para cada argumento en el nuevo objeto, y al apretar 'enter' ya tenemos nuestro nuevo objeto con los argumentos de nuestra 'clase' y los valores asignados al crearlo. 
+Cuando queramos ver lo que hay adentro de nuestro nuevoObjeto, a demás de mostrarnossus argumentos y valores, antes de las llaves nos muestra el nombre del constructor que lo creó. 
+En este caso si ponemos 'nuevoObjeto.metodo()' nos devolverá el resultado del método establecido en la funcion constructora, es decir el string 'este es un método'. 
+
+
+
 'Prototype': 
-Prototype es
+Todos los objetos en JavaScript hacen 'referencia' a otro objeto que es su prototipo. 
+Por ejemplo, si yo pongo en una consola 'string'.__proto__ esto nos devolverá cuál es el prototipo de nuestro 'string', que es un objeto llamado string ''. Si ponemos [].__proto__ la consola nos mostrará que el prototipo de esto es un objeto llamado Array[]. 
+Entonces, en este caso de los objetos y de las clases, cada objeto de Java Script tiene sus propias propiedades, que son visibles cuando lo invocamos, pero también tiene las propiedades de su prototipo. 
+En el caso anterior por ejemplo, el 'prototipo' del nuevoObjeto es 'Constructor: f', que es la función constructora que lo creó.
+Si escribimos nuevoObjeto.__proto__ esto nos devolverá: Constructor: f ; 
+
+
+A veces queremos usar una función para muchos objetos, y no queremos escribirla una y otra vez en cada objeto. 
+Cuando esto pasa, y los creamos a partir de 'clases', nuestros objetos (instancias) van a poder utilizar la información que haya en la función que los construyó.
+Si nuestro constructor tiene un método en su memoria, todos los objetos que esta cree podrán invocar esa función.
+Cuando queremos que nuestra clase tenga un método que puedan compartir los objetos creados a partir de la misma, lo hacemos de la siguiente manera: 
+
+Constructors.prototype.nuevoMetodo = function(){
+    console.log('Este es el valor del primer argumento: ' + this.argumento1)}
+
+De esta manera, cualquier objeto que sea una instancia de la clase Constructors puede invocar esta función por ejemplo así: 
+
+nuevoObjeto.nuevoMetodo // 'Este es el valor del primer argumento: 'primer argumento'.
