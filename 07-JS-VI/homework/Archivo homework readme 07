@@ -1,0 +1,30 @@
+En este archivo de texto voy a explicar el siguiente concepto
+como si me dirigiera a una persona de 12 años: 
+
+* Funciones Callback
+
+'Funciones Callback':
+JavaScript es un lenguaje de programación que trata las funciones como 'first class'.
+Esto quiere decir que podemos pasar una función como argumento a otra función, como resultado de otra función, 
+como valor de una variable. Esto no es así en todos los lenguajes. 
+Enconces, cuando una función es usada como argumento de otra, la llamamos 'callback'. Esto es una convención. 
+
+Un ejemplo de 'callback' sería el siguiente: 
+
+function saludarNombre (nombre){
+    return '¡Hola ' + nombre + '!' 
+}
+
+Esta sería nuestra primera función, ahora vamos a crear otra a la que le pasamo esta como argumento.
+function nuevoSaludo (nombre, callback){
+    return callback(nombre)
+}
+
+Esto quiere decir, que nuestro callback va a usar como parámetro el nombre que le pasemos en nuestra función nuevoSaludo.
+Por ejemplo, si ahora queremos usar nuestra función para saludar a Jazmín, la invocamos con ese nombre: 
+
+nuevoSaludo ('Jazmín', callback)
+Nos devolverá: 'Hola Jazmín!'
+ya que estamos usando como callback, (estamos 'llamando') a la función saludarNombre.
+
+Algo importante cuando vamos a utilizar una función callback es saber cuántos parámetros espera la función que queremos 'llamar'.
