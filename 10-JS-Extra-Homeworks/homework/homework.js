@@ -23,7 +23,26 @@ function numberOfCharacters(string) {
   //en formato par clave-valor.
   //Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
   //Escribe tu código aquí:
+  var diccionario = new Object ();
+  var letra;
+  for (var i = 0 ; i < string.length ; i++){
+    letra = string[i];
+    if(diccionario[letra])
+      diccionario[letra] ++;
+    else
+      diccionario[letra] = 1 
+  }
+  return diccionario
 }
+
+// otra manera del condicional: 
+// diccionario[letra] = (diccionario[letra])? diccionario[letra] + 1: 1;
+/*
+Esto se llama comentario de bloque 
+:D :D :D 
+*/
+
+
 
 
 function capToFront(s) {
@@ -31,6 +50,17 @@ function capToFront(s) {
   //al principio de la palabra.
   //Ejemplo: soyHENRY -> HENRYsoy
   //Escribe tu código aquí
+  var mayuscAdelante = ''
+  var noMayusculas = ''
+  for (var i = 0 ; i < s.length ; i++){
+    if (s[i] === s[i].toUpperCase()){
+      mayuscAdelante += s[i]
+    }
+    else {
+      noMayusculas += s[i]
+    }
+  }
+  return mayuscAdelante + noMayusculas
 }
 
 
@@ -40,8 +70,20 @@ function asAmirror(str) {
   //pero con cada una de sus palabras invertidas, como si fuera un espejo.
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
+  var palabrasEspejadas = []
+  var strSplit = str.split(' ')
+  var palabra
+  var palabraEspejada
+  for (var i = 0 ; i < strSplit.length ; i++){
+    palabra = strSplit[i]
+    palabraEspejada = ''
+    for (var j = palabra.length -1  ; j >= 0 ; j--){
+      palabraEspejada += palabra[j];
+   }
+   palabrasEspejadas.push(palabraEspejada)
+  }
+  return palabrasEspejadas.join(' ')
 }
-
 
 
 function capicua(numero){
@@ -49,6 +91,14 @@ function capicua(numero){
   //La misma debe retornar: "Es capicua" si el número se número que se lee igual de 
   //izquierda a derecha que de derecha a izquierda. Caso contrario retorna "No es capicua"
   //Escribe tu código aquí
+  var numToString = numero + '';
+  //otra forma: numero.toString()
+  var numEspejado = ''
+  for (var i = numToString.length -1  ; i >= 0 ; i--){
+    numEspejado += numToString[i]
+  }
+  return numToString == numEspejado ? 'Es capicua' : 'No es capicua';
+  //Es lo mismo que poner 'if num... == num... return 'algo', else 'lo otro'
 }
  
 
@@ -56,6 +106,13 @@ function deleteAbc(cadena){
   //Define una función que elimine las letras "a", "b" y "c" de la cadena dada 
   //y devuelva la versión modificada o la misma cadena, en caso de contener dichas letras.
   //Escribe tu código aquí
+  var cadenaSinAbc = ''
+  for (var i = 0 ; i < cadena.length ; i++){
+    if (cadena[i] != 'a' && cadena[i] != 'b' && cadena[i] != 'c'){
+      cadenaSinAbc += cadena[i]
+    }
+  }
+  return cadenaSinAbc
 }
 
 
@@ -64,7 +121,9 @@ function sortArray(arr) {
   //La función recibe una matriz de strings. Ordena la matriz en orden creciente de longitudes de cadena
   //Ej: Recibe ---> ["You", "are", "beautiful", "looking"] || Devuelve ---> [“You", "are", "looking", "beautiful"]
   //Escribe tu código aquí
+  return arr.sort(function(a,b){return a.length - b.length})  
 }
+//Esto lo tengo que chusmear más (bubble sort?) algoritmos de ordenamiento. Sort significa ordenar 
 
 
 function buscoInterseccion(arreglo1, arreglo2){
@@ -73,7 +132,23 @@ function buscoInterseccion(arreglo1, arreglo2){
   //Si no tienen elementos en común, retornar un arreglo vacío.
   //Aclaración: los arreglos no necesariamente tienen la misma longitud
   //Escribe tu código aquí  
+  elementosEnComun = new Array ();
+  for(var i = 0; i < arreglo1.length; i++){
+    if (arreglo2.indexOf(arreglo1[i]) != -1)
+    elementosEnComun.push(arreglo1[i])
+  }
+  return elementosEnComun
 }
+ 
+/* 
+function compararVectores(arr1, arr2){
+    elementosEnComun = new Array();
+    for(var i = 0; i < arr1.length; i++){
+        if(arr2.indexOf(arr1[i]) != -1)
+            elementosEnComun.push(arr1[i]);
+    }
+    return elementosEnComun;
+*/
 
 
 
